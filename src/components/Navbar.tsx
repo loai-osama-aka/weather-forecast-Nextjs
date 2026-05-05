@@ -50,7 +50,7 @@ export default function Navbar({ location }: Props  ) {
     setShowSuggestions(false);
   }
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    setLoadingCity(true);
+    setLoadingCity(true); 
     e.preventDefault();
     if (suggestions.length == 0) {
       setLoadingCity(false);
@@ -92,7 +92,7 @@ export default function Navbar({ location }: Props  ) {
           const response = await axios.get(
             `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${latitude},${longitude}?key=${process.env.NEXT_PUBLIC_WEATHER_KEY}`,
           );
-          const locationName = response.data.timezone;
+          const locationName = response.data.address;
           
           
           setLoadingCity(false);
