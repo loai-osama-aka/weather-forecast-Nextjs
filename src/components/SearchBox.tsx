@@ -5,7 +5,7 @@ type Props = {
   className?: string;
   value?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
-  onSubmit?: React.SubmitEventHandler<HTMLFormElement> | undefined;
+  onSubmit?: React.SubmitEventHandler<HTMLFormElement> ;
 };
 
 export default function SearchBox(props: Props) {

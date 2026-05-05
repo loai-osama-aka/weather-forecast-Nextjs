@@ -10,6 +10,7 @@ import { atomplace, loadingAtomCity } from "@/app/atom";
 
 type Props={
   location:string
+  
 }
 export default function Navbar({ location }: Props  ) {
   const [darkMode, setDarkMode] = useState(false);
@@ -48,7 +49,7 @@ export default function Navbar({ location }: Props  ) {
     setCity(suggestion);
     setShowSuggestions(false);
   }
-  function handleSubmit(e: React.SubmitEvent<HTMLButtonElement>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     setLoadingCity(true);
     e.preventDefault();
     if (suggestions.length == 0) {
