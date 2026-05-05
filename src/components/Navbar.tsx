@@ -95,12 +95,12 @@ export default function Navbar({ location }: Props  ) {
           const locationName = response.data.address;
           
           
-          setLoadingCity(false);
           setPlace(locationName);
           setError("");
-        } catch (error) {
           setLoadingCity(false);
+        } catch (error) {
           setError("Failed to fetch weather data for current location");
+          setLoadingCity(false);
         }
       });
     }
